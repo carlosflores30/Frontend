@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: 'https://proyectofinal-bi.onrender.com/api', // 👈 asegúrate que incluye /api
 });
 
 api.interceptors.request.use((config) => {
