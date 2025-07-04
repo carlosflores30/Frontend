@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   baseURL: 'https://smartstockai-api-402647003795.us-central1.run.app/api',
+  withCredentials: true, // 🔥 Necesario si usas cookies o usas CORS con credenciales
 });
 
 api.interceptors.request.use((config) => {
