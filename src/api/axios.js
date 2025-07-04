@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://proyectofinal-bi.onrender.com/api',
+  baseURL: 'https://smartstockai-api-402647003795.us-central1.run.app/api',
 });
 
 api.interceptors.request.use((config) => {
