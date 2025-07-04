@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/axios';
-import axios from 'axios'
 import logo from '../assets/logo-smartstock.png';
 
 const RegisterBusiness = () => {
@@ -35,13 +34,12 @@ const RegisterBusiness = () => {
     }
 
     try {
-      await axios.post('https://smartstockai-api-402647003795.us-central1.run.app/api/Negocios', {
+      await api.post('/Negocios', {
   ruc,
   razonSocial,
-  direccion,
-}, {
-  withCredentials: true
+  direccion
 });
+
       const response = await api.get('/Negocios');
       const negocios = response.data;
   
