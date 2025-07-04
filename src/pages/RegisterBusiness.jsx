@@ -34,12 +34,13 @@ const RegisterBusiness = () => {
     }
 
     try {
-      await api.post('/Negocios', {
-        ruc,
-        razonSocial,
-        direccion,
-      });
-
+      await axios.post('https://smartstockai-api-402647003795.us-central1.run.app/api/Negocios', {
+  ruc,
+  razonSocial,
+  direccion,
+}, {
+  withCredentials: true
+});
       const response = await api.get('/Negocios');
       const negocios = response.data;
   
